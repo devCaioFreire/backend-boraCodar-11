@@ -28,7 +28,6 @@ const User = require('./models/User');
 // CREDENCIAIS
 const DB_USER = process.env.DB_USER;
 const DB_PASS = process.env.DB_PASS;
-const port = process.env.PORT || 3001;
 
 // CONFIG JSON RESPONSE
 app.use(express.json());
@@ -37,7 +36,7 @@ app.use(express.json());
 mongoose
     .connect(`mongodb+srv://${DB_USER}:${DB_PASS}@vertigo.okghfuw.mongodb.net/?retryWrites=true&w=majority`)
     .then(() => {
-        app.listen(3001)
+        app.listen(3333)
         console.log('Server is running');
     })
     .catch((err) => console.log(err));

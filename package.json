@@ -3,9 +3,6 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "engines": {
-    "node": "14.x"
-  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "nodemon app.js",
@@ -24,7 +21,6 @@
     "mongoose": "^7.0.3"
   },
   "devDependencies": {
-    "@vercel/node": "^2.10.2",
     "nodemon": "^2.0.22"
   }
 }
