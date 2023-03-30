@@ -36,14 +36,14 @@ app.use(express.json());
 mongoose
     .connect(`mongodb+srv://${DB_USER}:${DB_PASS}@vertigo.okghfuw.mongodb.net/?retryWrites=true&w=majority`)
     .then(() => {
-        app.listen(3333)
+        app.listen(3001)
         console.log('Server is running');
     })
     .catch((err) => console.log(err));
 
 // ROTA PUBLICA
 app.get('/', (req, res) => {
-    res.status(200).json({ msg: 'API RUNNING' });
+    res.status(200).json({ msg: 'API IS RUNNING' });
 })
 
 // ROTA PRIVADA
