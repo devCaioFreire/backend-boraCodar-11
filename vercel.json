@@ -7,5 +7,5 @@
         }
     ],
     "routes": "/(.*)",
-    "dest": "/"
+    "dest": "/app.js"
 }
