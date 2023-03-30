@@ -10,14 +10,14 @@ const cookieParser = require('cookie-parser');
 const app = express();
 
 // Define as opções do CORS
-const corsOptions = {
-    origin: 'http://localhost:5173',
-    optionsSuccessStatus: 200,
-    methods: ['GET', 'POST']
-};
+// const corsOptions = {
+//     // origin: 'http://localhost:5173',
+//     optionsSuccessStatus: 200,
+//     methods: ['GET', 'POST']
+// };
 
 // Adiciona o middleware CORS às rotas
-app.use(cors(corsOptions));
+app.use(cors());
 app.use(express.urlencoded({ extended: true }));
 app.use(cookieParser());
 
@@ -28,6 +28,7 @@ const User = require('./models/User');
 // CREDENCIAIS
 const DB_USER = process.env.DB_USER;
 const DB_PASS = process.env.DB_PASS;
+const port = process.env.PORT || 3001;
 
 // CONFIG JSON RESPONSE
 app.use(express.json());
